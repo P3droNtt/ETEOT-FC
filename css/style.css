@@ -1,0 +1,686 @@
+@charset "UTF-8";
+
+:root {
+    --c00: #000;
+    --c01: #fff;
+    --c02: #F0F0F0;
+    --c03: #141414;
+    --c04: #AC2527;
+    --c05: #243153;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    text-decoration: none;
+    list-style: none;
+}
+
+.flex-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header {
+    height: 80px;
+    padding: 0 50px;
+
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+ul {
+    gap: 50px;
+}
+
+header li>a {
+    color: var(--c03);
+}
+
+#logo_header {
+    width: 60px;
+}
+
+#btn_header {
+    padding: 7px 12px;
+    background-color: var(--c04);
+    color: var(--c01);
+    font-size: 12px;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+#hero {
+    position: relative;
+
+    height: 500px;
+}
+
+#logo_hero {
+    position: absolute;
+    border: 6px solid var(--c01);
+    border-radius: 120px;
+}
+
+#img_hero_1,
+#img_hero_2 {
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    align-items: end;
+
+}
+
+#img_hero_1 {
+    background-image: linear-gradient(to top, rgba(22, 22, 22, 0.849), transparent), url(../assets/hero\ -\ imagem1.jpg);
+    border-right: 5px solid var(--c01);
+}
+
+#img_hero_2 {
+    background-image: linear-gradient(to top, rgba(22, 22, 22, 0.849), transparent), url(../assets/hero\ -\ imagem2.jpg);
+    border-left: 5px solid var(--c01);
+}
+
+
+#text_hero_1,
+#text_hero_2 {
+    position: relative;
+
+    background-color: #141414e3;
+    width: 550px;
+    padding: 22px;
+
+    flex-direction: column;
+    align-items: start;
+    gap: 7px;
+}
+
+#text_hero_1 h2,
+#text_hero_2 h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--c01);
+}
+
+#text_hero_1 h3,
+#text_hero_2 h3 {
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--c01);
+}
+
+#text_hero_1::after {
+    content: 'TRETA';
+    position: absolute;
+    top: -20px;
+
+    padding: 7px 30px;
+    color: var(--c01);
+    background-color: #AC2527;
+}
+
+#text_hero_2::after {
+    content: 'COPA DO BRASIL';
+    position: absolute;
+    top: -20px;
+
+    padding: 7px 30px;
+    color: var(--c01);
+    background-color: #AC2527;
+}
+
+#sect_info {
+    background-color: var(--c02);
+    height: 500px;
+
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+#prox_jogo {
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+
+    flex-direction: column;
+    justify-content: start;
+    gap: 30px;
+}
+
+#prox_jogo h1 {
+    font-size: 30px;
+    border-left: var(--c04) 5px solid;
+    padding: 0 15px;
+}
+
+#prox_jogo h2 {
+    font-size: 22px;
+    font-weight: 620;
+}
+
+#prox_jogo h3 {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+#prox_jogo_times {
+    flex-direction: column;
+}
+
+#prox_jogo_escudo {
+    gap: 20px;
+}
+
+#prox_jogo_escudo img {
+    width: 130px;
+    gap: 10px;
+}
+
+#prox_jogo_info {
+    color: var(--c04);
+
+    flex-direction: column;
+}
+
+
+#classificacao {
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+
+    flex-direction: column;
+    justify-content: start;
+    gap: 25px;
+}
+
+#classificacao h1 {
+    font-size: 30px;
+    border-left: var(--c04) 5px solid;
+    padding: 0 15px;
+}
+
+#classificacao h2 {
+    font-size: 15px;
+    font-weight: 620;
+    padding: 7px 14px;
+    background-color: var(--c04);
+    color: var(--c01);
+    font-weight: normal;
+}
+
+#classificacao_tabela {
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+
+td {
+    padding: 3px 20px;
+}
+
+td img {
+    width: 25px;
+}
+
+.td_negrito {
+    font-weight: bolder
+}
+
+#sect_historia {
+    margin-top: 160px;
+    padding: 0 40px;
+
+    gap: 40px;
+}
+
+#sect_historia figure {
+    position: relative;
+}
+
+#play_btn_video {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+
+    background-color: var(--c04);
+
+    height: 100px;
+    width: 180px;
+    cursor: pointer;
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+
+    transition: 0.4s;
+}
+
+#play_btn_video:hover {
+    scale: 1.1;
+}
+
+#play_btn_video h3 {
+    margin: 15px 0 0 100px;
+    color: var(--c01);
+    font-size: 25px;
+}
+
+#volume_btn_video {
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+
+    background-color: var(--c04);
+    height: 100px;
+    width: 180px;
+    cursor: pointer;
+
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+
+    transition: 0.4s;
+}
+
+#volume_btn_video:hover {
+    scale: 1.1;
+}
+
+#volume_btn_video h3 {
+    margin: 55px 0 0 10px;
+    color: var(--c01);
+    font-size: 26px;
+}
+
+#video {
+    width: 750px;
+    clip-path: polygon(0 0, 75% 0, 100% 25%, 100% 100%, 25% 100%, 0% 75%);
+}
+
+#div_text_historia {
+    height: 400px;
+
+    flex-direction: column;
+    align-items: start;
+    gap: 80px;
+}
+
+#div_text_historia div {
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+
+#div_text_historia div p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#btn_historia {
+    padding: 10px 52px;
+    background-color: var(--c04);
+    color: var(--c01);
+    font-size: var(--btn);
+}
+
+#sect_elenco {
+    margin-top: 200px;
+    background-color: var(--c02);
+    padding: 25px 0;
+
+    flex-direction: column;
+    justify-content: start;
+    gap: 50px;
+}
+
+#sect_elenco h1 {
+    color: var(--c04);
+    font-size: 50px;
+    font-weight: 900;
+}
+
+#sect_elenco figure {
+    width: 1200px;
+
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#sect_elenco figure img {
+    width: 300px;
+    clip-path: polygon(0 0, 70% 0, 100% 20%, 100% 100%, 0 100%);
+    filter: grayscale(60%);
+
+    transition: 0.3s;
+}
+
+#sect_elenco figure img:hover {
+    filter: grayscale(0);
+}
+
+#btn_elenco {
+    padding: 10px 52px;
+    background-color: var(--c04);
+    color: var(--c01);
+    font-size: var(--btn);
+}
+
+
+#sect_camisa {
+    margin-top: 160px;
+    padding: 40px 40px 150px 40px;
+    background-color: var(--c05);
+
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 50% 100%, 0 92%);
+
+}
+
+#sect_camisa>div {
+    gap: 60px;
+}
+
+#sect_camisa>hr {
+    height: 1px;
+    width: 100%;
+    background-color: var(--c01);
+}
+
+#sect_camisa #div_camisa_info img {
+    width: 700px;
+}
+
+#div_text_camisa {
+    height: 400px;
+
+    flex-direction: column;
+    align-items: start;
+    gap: 80px;
+}
+
+#div_text_camisa>div {
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+
+#div_text_camisa div h1 {
+    color: var(--c02);
+}
+
+#div_text_camisa div p {
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--c02);
+}
+
+#btn_camisa {
+    padding: 10px 52px;
+    background-color: var(--c04);
+    color: var(--c01);
+    font-size: var(--btn);
+}
+
+#div_card_camisa {
+    display: flex;
+    gap: 30px;
+}
+
+.card_camisa {
+    background-color: var(--c01);
+    width: 400px;
+    height: 500px;
+    padding: 0 0 600px 0;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+}
+
+.card_conteudo {
+    width: 400px;
+    padding: 20px 0 0 0;
+
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card_texto {
+    padding: 0px 40px;
+
+    align-items: start;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card_texto h1 {
+    font-size: 45px;
+}
+
+.card_texto h1 span:nth-child(1) {
+    color: var(--c04);
+    font-size: 50px;
+}
+
+.card_texto h1 span:nth-child(2) {
+    font-size: 30px;
+}
+
+.card_texto p {
+    color: var(--c03);
+}
+
+.card_conteudo img {
+    width: 250px;
+    height: 320px;
+}
+
+.btn_card_camisa {
+    width: 100%;
+    text-align: center;
+    padding: 10px 52px;
+    background-color: var(--c04);
+    color: var(--c01);
+    font-size: var(--btn);
+}
+
+#sect_foto {
+    margin-top: 100px;
+    padding: 50px;
+
+    flex-direction: column;
+    gap: 50px;
+}
+
+#sect_foto>h1 {
+    color: var(--c04);
+    font-size: 40px;
+}
+
+#div_card_foto {
+    gap: 20px;
+}
+
+.card_foto {
+    background-color: #F0F0F0;
+    border: 15px solid var(--c02);
+    width: 450px;
+    overflow: hidden;
+
+    flex-direction: column;
+    justify-content: start;
+
+}
+
+.card_foto img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+}
+
+.card_texto_foto {
+    padding: 5px;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.card_texto_foto h1 {
+    color: var(--c04);
+    font-size: 26px;
+}
+
+.card_texto_foto h2 {
+    color: var(--c04);
+    font-size: 15px;
+}
+
+.card_texto_foto p {
+    font-weight: 600;
+    font-size: 18px;
+    width: 400px;
+}
+
+#marcas {
+    background-color: var(--c04);
+    padding: 80px;
+    margin-top: 200px;
+
+    flex-wrap: wrap;
+    gap: 90px 187px;
+}
+
+#marcas img {
+    width: 180px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.footer {
+    background: var(--c05);
+    padding: 80px 0;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.footer_container {
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.footer_logo img {
+    width: 120px;
+    height: auto;
+}
+
+.footer_column {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_column li {
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.footer_column .title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+
+/* CELULARES PEQUENOS */
+@media (max-width: 450px) {
+    #header {
+        height: auto;
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+    }
+
+    #header img {
+        width: 100px;
+
+    }
+
+    nav {
+        width: auto;
+        padding: 0 100px;
+
+    }
+
+    ul {
+        gap: 30px;
+    }
+
+    #hero {
+        height: auto;
+
+    }
+
+}
+
+/* CELULARES GRANDES */
+@media (max-width: 580px) {}
+
+/* NOTEBOOKS */
+@media (max-width: 1154px) {}
+
+/* DESKTOPS */
+@media (min-width: 1440px) {
+    #hero {
+        width: 100%;
+    }
+
+    #sect_info {
+        width: 100%;
+    }
+
+    section {
+        width: 1440px;
+    }
+
+    #marcas {
+        width: 100%;
+    }
+
+    #marcas img {
+        width: 200px;
+    }
+
+    main {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
